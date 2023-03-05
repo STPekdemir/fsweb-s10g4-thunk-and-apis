@@ -5,13 +5,14 @@ import {
   FETCH_LOADING,
   FETCH_ERROR,
   GET_FAVS_FROM_LS,
+  LS_SFR,
 } from "./actions";
 
 const initial = {
   favs: [],
   current: null,
   error: null,
-  loading: true,
+  loading: false,
 };
 
 function writeFavsToLocalStorage(state) {
@@ -25,21 +26,35 @@ function readFavsFromLocalStorage() {
 export function myReducer(state = initial, action) {
   switch (action.type) {
     case FAV_ADD:
-      return state;
+      if (state.favs.includes(state.current)) {
+        return state;
+      } else {
+        const newFavs = [...state.favs, state.current];
+        const newState = { ...state, favs: [...newFavs] };
+        writeFavsToLocalStorage(newState);
+        return newState;
+      }
 
     case FAV_REMOVE:
-      return state;
+      const newFawsF = state.favs.filter((item) => item.id !== action.payload);
+      const newStateF = { ...state, favs: newFawsF };
+      writeFavsToLocalStorage(newStateF);
+      return newStateF;
 
     case FETCH_SUCCESS:
-      return state;
+      return { ...state, loading: false, current: action.payload };
 
     case FETCH_LOADING:
-      return state;
+      return { ...state, loading: true, current: null };
 
     case FETCH_ERROR:
-      return state;
+      return { ...state, error: action.payload, loading: false };
 
     case GET_FAVS_FROM_LS:
+      const hafıza = readFavsFromLocalStorage();
+      return { ...state, favs: hafıza };
+    case LS_SFR:
+      localStorage.clear();
       return state;
 
     default:

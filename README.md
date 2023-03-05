@@ -12,11 +12,11 @@ Daha önceki günlerde redux store'u oluşturmayı, middleware kavramını, useS
 
 ### Görev 1: Proje Kurulumu
 
-- [ ] Forklayın.
-- [ ] Klonlayın
-- [ ] Ana dizine gidin
-- [ ] `npm install`
-- [ ] `npm start`
+- [+] Forklayın.
+- [+] Klonlayın
+- [+] Ana dizine gidin
+- [+] `npm install`
+- [+] `npm start`
 
 ### Görev 2: Proje Gereksinimleri
 
@@ -29,38 +29,38 @@ Bu projede kullanmak için öncelikle bir API seçmelisiniz. [Bu adresten](https
 - "Favoriler" kısmında daha önce favorilere eklenmiş ögeler görüntülenmeli
 - "Favoriler" localStorage içerisinde tutulmalı ve uygulama ilk açıldığında localStorage içerisinde bu amaçla saklanmış veri varsa kontrol edilmeli ve kullanılmalı.
 
-* [ ] Projeyi inceleyin ve componentların birbiriyle ilişkisini anlayın.
+* [+] Projeyi inceleyin ve componentların birbiriyle ilişkisini anlayın.
 
-* [ ] Kullanmak için bir API seçin. Burada fazla vakit kaybetmeyin, hoşunuza giden biri ile başlayın.
+* [+] Kullanmak için bir API seçin. Burada fazla vakit kaybetmeyin, hoşunuza giden biri ile başlayın.("https://official-joke-api.appspot.com/random_joke")
 
-* [ ] `redux` ve `react-redux` paketleri sizin için eklendi. Siz de `redux-thunk` paketini kurun ve store oluşturma aşamasında ilgili yerde kullanın.
+* [+] `redux` ve `react-redux` paketleri sizin için eklendi. Siz de `redux-thunk` paketini kurun ve store oluşturma aşamasında ilgili yerde kullanın.
 
-* [ ] Projeye `axios` paketini ekleyin.
+* [+] Projeye `axios` paketini ekleyin.
 
 * [ ] `actions.js` içerisindeki `fetchAnother` isimli action creator async olmalı ve seçtiğiniz API'dan veri almalı. Derste öğrendiklerinizi kullanarak bu actionu oluşturun ve içerisindeki farklı durumlarda farklı actionlar dispatch edin.
 
-* [ ] Uygulamadaki diğer actionlar neler? Tespit edin ve gerekli reducer ve actionları oluşturun.
+* [+] Uygulamadaki diğer actionlar neler? Tespit edin ve gerekli reducer ve actionları oluşturun.
 
-* [ ] `Item.js` ve `FavItem.js` dosyasını, seçtiğiniz API'den gelen veri yapısına uygun olarak düzenleyin ve stilleyin. Tailwind kullanmak zorunda değilsiniz.
+* [+] `Item.js` ve `FavItem.js` dosyasını, seçtiğiniz API'den gelen veri yapısına uygun olarak düzenleyin ve stilleyin. Tailwind kullanmak zorunda değilsiniz.
 
-* [ ] `Store` içerisindeki verileri kullanmak istediğiniz yerlerde kullanmak için gerekli kısımları ekleyin.
+* [+] `Store` içerisindeki verileri kullanmak istediğiniz yerlerde kullanmak için gerekli kısımları ekleyin.
 
-* [ ] Sayfadaki `Favorilere Ekle` kısmında kullanmak için gerekli actionu ve reducer bölümünü ekleyin.
+* [+] Sayfadaki `Favorilere Ekle` kısmında kullanmak için gerekli actionu ve reducer bölümünü ekleyin.
 
 ### Görev 3: Favorilenenleri LocalStorage içerisine eklemek/buradan kullanmak
 
-- [ ] İlgili reducer parçalarının içerisinde, size sağlanmış olan `readFavsFromLocalStorage` ve `writeFavsToLocalStorage` fonksiyonlarını kullanın ve uygulamada yaptığımız favorilere ekleme işlemlerinin sonuçlarını saklamamızı sağlayın.
+- [+] İlgili reducer parçalarının içerisinde, size sağlanmış olan `readFavsFromLocalStorage` ve `writeFavsToLocalStorage` fonksiyonlarını kullanın ve uygulamada yaptığımız favorilere ekleme işlemlerinin sonuçlarını saklamamızı sağlayın.
 
 ### Görev 4: react-toastify ile favorilere ekleme işlemi sonrası bildirim vermek ve bildirim sonrasında API'dan yeni bir oge almak
 
-- [ ] Projenize `react-toastify` paketini ekleyin.
+- [+] Projenize `react-toastify` paketini ekleyin.
 
-- [ ] Gerekli ayarlamaları yapın ve bir öge favorilere eklendikten sonra bir başarı toast mesajı görüntüleyin.
+- [+] Gerekli ayarlamaları yapın ve bir öge favorilere eklendikten sonra bir başarı toast mesajı görüntüleyin.
 
-- [ ] Bildirim kaybolmaya yakınken, API'dan tekrar bir öge isteyin.
+- [+] Bildirim kaybolmaya yakınken, API'dan tekrar bir öge isteyin.
 
 ### Esnek Görevler
 
-- [ ] Proje stillerini kendi istediğiniz şekilde değiştirmeye çalışın.
+- [-] Proje stillerini kendi istediğiniz şekilde değiştirmeye çalışın.
 
-- [ ] LocalStorage içerisindeki verileri sıfırlama opsiyonu ekleyin.
+- [+] LocalStorage içerisindeki verileri sıfırlama opsiyonu ekleyin.
